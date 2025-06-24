@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="calculator">
+        <h2>Calculator</h2>
+        <form method="post">
+            <input type="text" name="expression" placeholder="e.g. 2+3*4" required>
+            <button type="submit">Calculate</button>
+        </form>
+        {% if result != "" %}
+            <div class="result">
+                <p>Result: {{ result }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
